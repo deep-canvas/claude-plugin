@@ -1,0 +1,21 @@
+{
+  "name": "deepcanvas",
+  "owner": {
+    "name": "DeepCanvas",
+    "url": "https://deepcanvas.studio"
+  },
+  "metadata": {
+    "description": "DeepCanvas Claude Code integration",
+    "version": "0.1.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "deepcanvas",
+      "source": "./plugins/deepcanvas",
+      "description": "Bring DeepCanvas tasks and PRDs into Claude Code sessions",
+      "category": "productivity",
+      "version": "0.1.0"
+    }
+  ]
+}

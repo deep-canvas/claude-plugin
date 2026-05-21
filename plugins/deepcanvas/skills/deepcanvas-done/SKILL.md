@@ -7,13 +7,15 @@ allowed-tools: Bash(deep done*)
 
 # DeepCanvas: Mark Task Done
 
+Always pass `--verbose` to `deep done` so the full output is captured.
+
 If the user provided a task code in $ARGUMENTS, run:
 
-!`deep done $ARGUMENTS --headless`
+!`deep done $ARGUMENTS --headless --verbose`
 
 If no task code was provided (active task), run:
 
-!`deep done --headless`
+!`deep done --headless --verbose`
 
 From the JSON output:
 - On success (`ok: true`): confirm to the user with the task code and title that was completed.

@@ -1,7 +1,7 @@
 {
   "name": "deepcanvas",
   "description": "DeepCanvas Claude Code integration",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "owner": {
     "name": "DeepCanvas"
   },
@@ -11,7 +11,7 @@
       "source": "./plugins/deepcanvas",
       "description": "Bring DeepCanvas tasks and PRDs into Claude Code sessions",
       "category": "productivity",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "author": {
         "name": "DeepCanvas"
       },

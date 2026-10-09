@@ -17,7 +17,7 @@ Knowledge documents are contracts shared between projects. Core kinds (reuse the
 - `infra` — deploy / environment facts other projects depend on
 - `glossary` — domain terms
 
-Run every `deep` command via the Bash tool, exactly once, always with `--headless`.
+Run every `deep` command via the Bash tool, exactly once, always with `--headless`. When the deep CLI is not available but the DeepCanvas MCP tools are, use `knowledge_catalog`, `knowledge_get` and `knowledge_push` instead; the flows below map one to one (catalog → list/pull → read, write → push).
 
 ## Pull flow (fetching another project's knowledge)
 

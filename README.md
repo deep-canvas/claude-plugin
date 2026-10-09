@@ -8,11 +8,21 @@ Claude Code skills that drive the DeepCanvas CLI:
 
 ## Prerequisites
 
+Either the deep CLI (measures token and time usage per task from the local transcripts):
+
 ```bash
 curl -fsSL cli.deepcanvas.studio/install.sh | sh
 deep login
 deep init
 ```
+
+or the DeepCanvas MCP server (no install; documents, board and Brief management too):
+
+```bash
+claude mcp add --transport http --scope user deepcanvas https://mcp.deepcanvas.studio/mcp
+```
+
+Both together is best: the skills use the CLI for pull/done and MCP for the rest.
 
 ## Install Plugin
 

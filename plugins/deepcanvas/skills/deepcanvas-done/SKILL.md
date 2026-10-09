@@ -7,7 +7,17 @@ allowed-tools: Bash(deep done*)
 
 # DeepCanvas: Mark Task Done
 
-Run `deep done` **exactly once** using the Bash tool. Never run it a second time in the same turn — the first successful run already completed the task and cleared the local active marker.
+## Which path: deep CLI or DeepCanvas MCP
+
+Two ways reach DeepCanvas; pick once per session and tell the user which one you used only if asked.
+
+- **deep CLI** (`deep` on PATH and `.deep/config.toml` in the repository): use it for `pull` and `done`. `deep pull` records when work started and `deep done` reads the local transcripts, so the task gets its real token and time usage. This is the only way token usage is measured.
+- **DeepCanvas MCP** (`deepcanvas` tools such as `list_tasks`, `get_task`, `complete_task` are available): use it when the CLI is not installed or the repository is not bound, and always for things the CLI cannot do (documents, folders, Brief, board edits, comments). `complete_task` records duration and tool calls but not tokens.
+- Both available: CLI for pull/done, MCP for everything else. Never run both `deep done` and `complete_task` for the same task.
+
+**MCP path** (only when the task was pulled through MCP or the CLI is unavailable): call `complete_task` once with the project, the task code and a one-sentence `summary` of what was done. Then continue with the knowledge assessment below.
+
+**CLI path**: run `deep done` **exactly once** using the Bash tool. Never run it a second time in the same turn — the first successful run already completed the task and cleared the local active marker.
 
 - If the user provided a task code in $ARGUMENTS, run: `deep done $ARGUMENTS --headless --verbose`
 - If no task code was provided (active task), run: `deep done --headless --verbose`
